@@ -1,8 +1,7 @@
-# GTA-Domain-Adaptation
+# Sim2Real ModelZoo
 
-We study the problem of domain adaptation between GTA and cityscapes datasets. <br>
-This was done as part of the group project for ECE 285 (ML for Image Processing) course at UCSD. <br>
-*Contributors: Manjot Singh Bilkhu, Anurag Paul, Tushar Dobhal, Harshul Gupta and Sreekrishna Ramaswamy.*
+This repository provides a framework to run inferencee for various image to image translation models. <br>
+Done by MinusZero! <br>
 
 # Getting Started
 ### Dependencies
@@ -14,6 +13,8 @@ pip install -r requirements.txt
 ```
 
 ### Dataset
+We use the RGB Camera images from CARLA Simulator for testing the models. If you wish to train/fine-tune the models, you can download the GTA-Cityscape dataset below!
+
 Download the dataset by running 
 ```
 bash ./get_dataset.sh
@@ -25,7 +26,8 @@ Download pretrained models using
 ``` 
 bash ./get_pretrained_models.sh
 ```
-This will create a folder named models and will download pre-trained models which will be used by the test and demo notebooks.
+This will create a folder named saved_models and will download pre-trained models which will be used by the test and demo notebooks.
+The models part of this folder will be : CycleGAN unsupervised and semisupervised, and DualGAN unsupervised and semisupervised.
 
 # Description
 ```
