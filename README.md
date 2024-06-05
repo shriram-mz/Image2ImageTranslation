@@ -48,6 +48,16 @@ train_test.p : Pickle file containing the train-test indexes of images.
 utils.py : Utility functions used across different files.
 ```
 
+# Running the ModelZoo
+To run the ModelZoo, use the following command :
+```
+python model_zoo.py --model cycle_gan_un --data_root /path/to/your/images --image_size 512 --output_path /path/to/save/images
+```
+--model : Enter the model here, the models available are : dual_gans_un, dual_gans_semi, cycle_gan_un, cycle_gan_semi, cycle_gan_512
+--image_size : The default size is 256
+
+Inside model_zoo.py, one can find the ModelZoo class whose object is initialized in the main function. The load model function takes us to the ModelLoader class inside model_loader.py where the models are initalized and loaded. The infer() in the ModelZoo calls the necessary methods to get the final output and save it to the desired directory.  
+
 # Results
 - Sample Output
 <img src="output.png">
